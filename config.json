@@ -1,0 +1,39 @@
+{
+    "type": "Settings",
+    "audio": {
+        "input":  {
+            "encoding": "mulaw", 
+            "sample_rate": 8000
+        },
+        "output": {
+            "encoding": "mulaw", 
+            "sample_rate": 8000, 
+            "container": "none"
+        }
+    },
+    "agent": {
+        "language": "en",
+        "listen": {
+            "provider": {
+                "type": "deepgram", 
+                "version": "v2", 
+                "model": "<YOUR_CHOICE_MODEL>"
+                }
+            },
+        "think":  {
+            "provider": {
+                "type": "open_ai", 
+                "model": "<YOUR_CHOICE_MODEL>"
+                }, 
+            "prompt": "You're a health assistant Zara, a highly experienced registered assistant with 15 years of clinical experience and You specialize in patient education and can answer complex medical questions with accuracy and compassion You discuss symptoms and their potential causes and provide medical assistance."
+            },
+        "speak":  {
+            "provider": {
+                "type": "deepgram", 
+                "version": "v2", 
+                "model": "<YOUR_CHOICE_MODEL>"
+                }
+            },
+        "greeting": "Hello, I'm Zara. I'm here to help answer your medical questions and provide health guidance. What would you like to know today?"
+    }
+}
